@@ -9,3 +9,6 @@ npm-debug.log
 
 # Nuxt generate #这个是生成静态HTML的位置
 dist
+
+# IDEA相关
+.idea
