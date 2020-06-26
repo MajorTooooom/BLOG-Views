@@ -8,7 +8,7 @@ nuxt.js是解决服务端渲染的组件，在Vue的[官网](https://cn.vuejs.or
 
 
 
-## 一、准备工作
+## 0.1. 一、准备工作
 
 ```html
 安装node.js、npm；
@@ -22,7 +22,7 @@ nuxt.js是解决服务端渲染的组件，在Vue的[官网](https://cn.vuejs.or
 npm install vue-cli -g
 ```
 
-## 二、安装nuxt.js项目
+## 0.2. 二、安装nuxt.js项目
 
 在一个空文件夹中运行一下命令：
 
@@ -44,13 +44,13 @@ npm install axios --save
 
 可以用npm axios -v查看版本。关于为什么要用`--save`是为了下载模块到本地，具体可以参考博客[LINK](https://www.w3h5.com/post/425.html).
 
-### 执行安装
+### 0.2.1. 执行安装
 
 ```powershell
 npm install
 ```
 
-### 执行启动
+### 0.2.2. 执行启动
 
 ```powershell
 npm run dev
@@ -58,55 +58,55 @@ npm run dev
 
 
 
-##  三、项目目录结构
+## 0.3. 三、项目目录结构
 
 安装好之后，看看目录结构：
 
-### .nuxt
+### 0.3.1. nuxt
 
 这是nuxtjs生成文件的文件夹，一般不用改；
 
-### assets
+### 0.3.2. assets
 
 静态资源文件夹
 
-### components
+### 0.3.3. components
 
 组件
 
-### layouts
+### 0.3.4. layouts
 
 布局
 
-### node_modules
+### 0.3.5. node_modules
 
 依赖包存放处
 
-### pages
+### 0.3.6. pages
 
 放页面的地方
 
-### plugins
+### 0.3.7. plugins
 
 自定义下载的`JavaScript插件`都放在这里
 
-### static
+### 0.3.8. static
 
 静态资源文件
 
-### store
+### 0.3.9. store
 
 状态管理？
 
-### eslintrc.js(文件)
+### 0.3.10. eslintrc.js(文件)
 
 代码规范规则，大公司才用
 
-### nuxt.config.js（重要文件）
+### 0.3.11. nuxt.config.js（重要文件）
 
 这里面的配置可以理解为通用配置。
 
-### package.json
+### 0.3.12. package.json
 
 也是配置文件，比如改端口号：
 
@@ -120,19 +120,19 @@ npm run dev
     }
 ```
 
-## 四、多页统一配置
+## 0.4. 四、多页统一配置
 
 传统单页应用，只需要引入js、css这些就能直接用了，如果我们想统一引用呢？如何只配置一次就可以实现全部页面都引用（比如css）？
 
 测试方法步骤：
 
-### 1）准备一个css
+### 0.4.1. ）准备一个css
 
 在文件夹`assets`下面创建一个`testcss.css`的文件；写入`html{color: red !important;}`；
 
 加`!important`的作用是因为有些页面已经有默认样式的情况下，有时候会替换不了，加了!important之后就可以强制替换（？！）；
 
-### 2）在nuxt.config.js中配置
+### 0.4.2. ）在nuxt.config.js中配置
 
 在nuxt.config.js中的head{}中紧跟着加一个css{}配置：
 
@@ -146,7 +146,7 @@ head:{省略..........},css: ['~assets/testcss.css'],
 
 
 
-## 五、路由实现页面跳转
+## 0.5. 五、路由实现页面跳转
 
 这里要理解前端的`路由`的概念：
 
@@ -169,7 +169,7 @@ head:{省略..........},css: ['~assets/testcss.css'],
 
 路由文件在`.nuxt\router.js`这个位置可以点进去看看。
 
-## 六、参数传递
+## 0.6. 六、参数传递
 
 ```vue
 <nuxt-link :to="{name:'index'}">返回HOME</nuxt-link>
@@ -196,7 +196,7 @@ head:{省略..........},css: ['~assets/testcss.css'],
 
 
 
-## 七、动态路由和参数校验
+## 0.7. 七、动态路由和参数校验
 
 （需要去）官网文档地址：[动态路由](https://www.nuxtjs.cn/guide/routing#%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1)详细看这里不多展开，根据文档的提示，其设计思路是：
 
@@ -260,7 +260,7 @@ export default {
 
 校验的内容在下面讲 ↓
 
-## 八、路由参数校验
+## 0.8. 八、路由参数校验
 
 官网文档地址[路由参数校验](https://www.nuxtjs.cn/guide/routing#%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8C)页面找到`#路由参数校验`板块	:
 
@@ -320,7 +320,7 @@ A>>>路由route>>>B的`export default`>>>B的`template`
 
 
 
-## 九、过渡动画效果
+## 0.9. 九、过渡动画效果
 
 官网文档地址：[过渡动画效果](https://www.nuxtjs.cn/guide/routing#%E5%8A%A8%E6%80%81%E5%B5%8C%E5%A5%97%E8%B7%AF%E7%94%B1)
 
@@ -330,9 +330,9 @@ A>>>路由route>>>B的`export default`>>>B的`template`
 
 
 
-## 十、默认模版和默认布局
+## 0.10. 十、默认模版和默认布局
 
-### 默认模板
+### 0.10.1. 默认模板
 
 这个应该是对应官网文档中的[视图](https://www.nuxtjs.cn/guide/views)模块，官网文档写的很明白了：
 
@@ -379,7 +379,7 @@ A>>>路由route>>>B的`export default`>>>B的`template`
 
 
 
-### 默认布局
+### 0.10.2. 默认布局
 
 含义：默认布局指的是`<template></template>`之内的内容，之外的它处理不了.默认布局文件位于layouts文件夹中的`layouts\default.vue`。
 
@@ -396,7 +396,7 @@ A>>>路由route>>>B的`export default`>>>B的`template`
 
 这里不用重启服务器，可以查看各个画面都是有效果了。
 
-## 十一、自定义错误页
+## 0.11. 十一、自定义错误页
 
 直接看官网文档【[页面](https://www.nuxtjs.cn/guide/views#%E9%A1%B5%E9%9D%A2)】，有很详细的解析和例子：
 
@@ -431,7 +431,7 @@ A>>>路由route>>>B的`export default`>>>B的`template`
 
 
 
-## 十二、页面组件及其配置项
+## 0.12. 十二、页面组件及其配置项
 
 对应【[官网文档](https://www.nuxtjs.cn/guide/views#%E9%A1%B5%E9%9D%A2)】中的`页面`、`HTML头部`、`默认Meta标签`三个板块。
 
@@ -481,7 +481,7 @@ export default {
 
 下面就测试几个配置项，其中常用的就是`meta`(SEO用)、**`asyncData`**异步数据处理、head等。
 
-### validate()
+### 0.12.1. validate()
 
 上面第八节已经详细讲了，这里不展开.
 
@@ -499,7 +499,7 @@ export default {
 </script>
 ```
 
-### **head()**
+### 0.12.2. **head()**
 
 要彻底理解head，需要回顾一下`nuxt.config.js`文件，它里面全局配置了一个`head:{}`:
 
@@ -571,7 +571,7 @@ meta：[
 
 
 
-### asyncData()
+### 0.12.3. asyncData()
 
 asyncData()方法是异步加载数据，是必须掌握的方法（/配置项）。【[官网文档](https://www.nuxtjs.cn/guide/async-data)】可能更详细,这里测试几组实例。
 
@@ -610,7 +610,7 @@ asyncData()方法是异步加载数据，是必须掌握的方法（/配置项�
 </script>
 ```
 
-#### 方式1：promise
+#### 0.12.3.1. 方式1：promise
 
 ```vue
 <script>
@@ -659,7 +659,7 @@ axios.get()获取数据后，通过then方法，将结果集return，其中nuxtj
 
 且这是主键渲染之前的动作，是调用不了this的。
 
-#### 方式2：async/await方法（推荐多练）
+#### 0.12.3.2. 方式2：async/await方法（推荐多练）
 
 这种方式比较优雅
 
@@ -672,7 +672,7 @@ axios.get()获取数据后，通过then方法，将结果集return，其中nuxtj
 
 
 
-## 十三、静态资源文件和生产静态HTML
+## 0.13. 十三、静态资源文件和生产静态HTML
 
 如何引入图片：
 
@@ -699,7 +699,7 @@ axios.get()获取数据后，通过then方法，将结果集return，其中nuxtj
 </style>
 ```
 
-#### 生成静态文件
+#### 0.13.0.3. 生成静态文件
 
 ```powershell
 npm run generate
@@ -725,7 +725,7 @@ live-server
 
 
 
-## 十四、使用UI框架Ant Design of Vue
+## 0.14. 十四、使用UI框架Ant Design of Vue
 
 【[官网文档](https://www.antdv.com/docs/vue/introduce-cn/)】
 
@@ -735,7 +735,7 @@ live-server
 cnpm install ant-design-vue --save
 ```
 
-### 理解引入
+### 0.14.1. 理解引入
 
 盲猜有全局引入和单页面引入两种方式。
 
@@ -744,11 +744,11 @@ cnpm install ant-design-vue --save
 | 如何获取js | 放到static | npm安装后配置plugins |
 |  如何使用  |  导入页面  |    import导入页面    |
 
-### 引入什么
+### 0.14.2. 引入什么
 
 js和css
 
-### 如何引入css
+### 0.14.3. 如何引入css
 
 传统方式下我们一般会把`ant-design-vue/dist/antd.css`文件一个个放到页面，这里nuxt的话直接在`nuxt.config.js`文件里面配置即可：
 
@@ -769,7 +769,7 @@ module.exports = {
 
 这样每个页面都会导入。
 
-### 如何引入js
+### 0.14.4. 如何引入js
 
 参照官网，按需引入，比如我们现在需要在某个页面使用，一般是：
 
@@ -823,7 +823,7 @@ module.exports = {
 
 
 
-## 十五、Nuxt中使用组件components
+## 0.15. 十五、Nuxt中使用组件components
 
 components是Vue的内容，作用类似`<template>`，也是一个个`XXX.vue`文件，里面可以写css和js，nuxt对他的封装时这样的：
 
@@ -867,7 +867,7 @@ components
 元素名：	<app-logo/>
 ```
 
-### 如何全局引入
+### 0.15.1. 如何全局引入
 
 看出它其实就是js代码，可以做成引入js文件那种方式，参照十四
 
@@ -875,9 +875,9 @@ components
 
 
 
-## 其他
+## 0.16. 其他
 
-### 使用JQuery
+### 0.16.1. 使用JQuery
 
 > 经过多次测试，一下方法可行：
 >
