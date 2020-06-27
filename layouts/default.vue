@@ -1,3 +1,5 @@
+<!--默认布局指的是`<template></template>`之内的内容，之外的它处理不了.默认布局文件位于layouts文件夹中的`layouts\default.vue`。-->
+<!--<nuxt/>代表其他模板综合-->
 <template>
   <div>
     <nuxt/>
@@ -53,6 +55,11 @@
   /*div下的元素居中*/
   .centerDiv, .centerdiv {
     text-align: center;
+  }
+
+  /*li标签去掉圆点*/
+  li {
+    list-style: none;
   }
 </style>
 

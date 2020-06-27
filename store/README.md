@@ -9,3 +9,22 @@ https://nuxtjs.org/guide/vuex-store
 
 **This directory is not required, you can delete it if you don't want to use it.**
 
+
+
+import Vuex from 'vuex';
+
+const createStore = () => {
+  return new Vuex.Store({
+    strict: false,
+    state: () => ({
+      counter: 0
+    }),
+    mutations: {
+      increment(state) {
+        state.counter++
+      }
+    }
+  })
+}
+
+export default createStore;

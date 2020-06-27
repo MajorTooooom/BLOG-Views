@@ -4,5 +4,20 @@
 
 
 
+前台技术
+
+Nuxt.js
+
+ant-Design-Vue
 
 
+
+后台技术
+
+
+
+开发工具
+
+IDEA、VSCode
+
+Nuxtjs搭建过程及注意事项：[doc-基础框架NUXTJS.md](./doc-基础框架NUXTJS.md)

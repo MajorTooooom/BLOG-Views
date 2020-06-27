@@ -670,7 +670,9 @@ axios.get()获取数据后，通过then方法，将结果集return，其中nuxtj
   }
 ```
 
+### asyncData已知问题
 
+**在components文件夹下面创建的vue文件中无法使用，在pages文件夹下面的才可以；**
 
 ## 0.13. 十三、静态资源文件和生产静态HTML
 
@@ -873,7 +875,17 @@ components
 
 
 
+## 十六、如何使用自定义的layout布局
 
+Nuxt pages下不同的页面对应layout下的页面布局_muzidigbig的博客-CSDN博客_nuxt layout https://blog.csdn.net/muzidigbig/article/details/84937830
+
+
+
+## 十七、使用store
+
+(1条消息)Nuxt.js项目中js文件单独使用Vuex的store_彭世瑜的博客-CSDN博客_nuxtjs项目里 store 怎么在一个里使用另一个 https://blog.csdn.net/mouday/article/details/106495756
+
+使用方法https://juejin.im/post/5b89f40a51882542a82ba526
 
 ## 0.16. 其他
 
@@ -897,6 +909,14 @@ components
 > </script>
 > ```
 
+
+
+### 注意事项
+
+ant-Design-Vue是按需引入的，如果用了组件没效果，看看`plugins/antDesignVue.js`是否导入了模块；
+
+### 参考资料
+
 视频教程链接：本学习文档是根据B站JSPang老师的视频【[nuxtjs](https://www.bilibili.com/video/BV194411G74t?from=search&seid=542615147458306907)】进行实践，感觉pang老师的分享~
 
 运行过程中`CTRL+C`可以退出运行.
@@ -909,5 +929,6 @@ export 和 export default 的区别 - 枫鸟~ - 博客园 https://www.cnblogs.co
 
 npm中全局安装和本地安装的区别 http://www.mamicode.com/info-detail-1758031.html
 
+vue组件间的传值方式及方法调用汇总 - Mike17 - 博客园 https://www.cnblogs.com/cx709452428/p/10616983.html
 
-
+vue 出现Elements in iteration expect to have 'v-bind:key' directives问题 - 简书 https://www.jianshu.com/p/2cf1a0736154

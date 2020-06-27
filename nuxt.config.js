@@ -22,6 +22,8 @@ module.exports = {
   plugins: [
     '~plugins/antDesignVue.js'
   ],
+  modules: [
+  ],
   /*
    ** Customize the progress bar color
    */
@@ -43,6 +45,5 @@ module.exports = {
         })
       }
     },
-    plugins: []
   }
 }
