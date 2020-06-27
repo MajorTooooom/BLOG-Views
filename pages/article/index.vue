@@ -1,8 +1,6 @@
 <template>
   <div>
     <p>信息来自`store/index.js`下：token</p>
-    <br>
-    <!--    <button @click="$store.commit('increment')">{{ $store.state.counter }}</button>-->
   </div>
 </template>
 
