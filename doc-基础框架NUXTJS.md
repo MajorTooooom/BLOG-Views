@@ -887,6 +887,10 @@ Nuxt pages下不同的页面对应layout下的页面布局_muzidigbig的博客-C
 
 使用方法https://juejin.im/post/5b89f40a51882542a82ba526
 
+
+
+https://blog.csdn.net/u012302552/article/details/80203997
+
 ## 0.16. 其他
 
 ### 0.16.1. 使用JQuery
